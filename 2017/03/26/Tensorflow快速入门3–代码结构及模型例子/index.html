@@ -15,22 +15,12 @@
 
 
 
-<meta name="description" content="Tensorflow快速入门3–代码结构及模型例子
-description:  “Hadoop是一种开源的适合大数据的分布式存储和处理的平台。
-Hadoop有三种不同的模式操作，分别为单机模式、伪分布模式和完全分布模。
-Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
-环境：
-​    虚拟机ubuntun16.0.4； Tensorflow版本：0.12.0">
+<meta name="description" content="Tensorflow本身附带了很多例程，网上很多博客、帖子其实都是Tensorflow本身附带的例子。本文简单分析一些Tensorflow代码结构及模型例子，很多例子都是可以直接运行的，当然考虑到训练时间及电脑的配置，可以自行修改相应参数，以便快速上手，适合初学者练习。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tensorflow快速入门3--代码结构及模型例子">
 <meta property="og:url" content="http://yoursite.com/2017/03/26/Tensorflow快速入门3–代码结构及模型例子/index.html">
 <meta property="og:site_name" content="2010yhh的个人博客">
-<meta property="og:description" content="Tensorflow快速入门3–代码结构及模型例子
-description:  “Hadoop是一种开源的适合大数据的分布式存储和处理的平台。
-Hadoop有三种不同的模式操作，分别为单机模式、伪分布模式和完全分布模。
-Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
-环境：
-​    虚拟机ubuntun16.0.4； Tensorflow版本：0.12.0">
+<meta property="og:description" content="Tensorflow本身附带了很多例程，网上很多博客、帖子其实都是Tensorflow本身附带的例子。本文简单分析一些Tensorflow代码结构及模型例子，很多例子都是可以直接运行的，当然考虑到训练时间及电脑的配置，可以自行修改相应参数，以便快速上手，适合初学者练习。">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\13.jpg">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\15.jpg">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\15.jpg">
@@ -42,15 +32,10 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\19.jpg">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\QQ截图20170121171240.jpg">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\QQ截图20170121171812.jpg">
-<meta property="og:updated_time" content="2017-03-26T07:33:16.565Z">
+<meta property="og:updated_time" content="2017-03-26T07:37:48.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tensorflow快速入门3--代码结构及模型例子">
-<meta name="twitter:description" content="Tensorflow快速入门3–代码结构及模型例子
-description:  “Hadoop是一种开源的适合大数据的分布式存储和处理的平台。
-Hadoop有三种不同的模式操作，分别为单机模式、伪分布模式和完全分布模。
-Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
-环境：
-​    虚拟机ubuntun16.0.4； Tensorflow版本：0.12.0">
+<meta name="twitter:description" content="Tensorflow本身附带了很多例程，网上很多博客、帖子其实都是Tensorflow本身附带的例子。本文简单分析一些Tensorflow代码结构及模型例子，很多例子都是可以直接运行的，当然考虑到训练时间及电脑的配置，可以自行修改相应参数，以便快速上手，适合初学者练习。">
 <meta name="twitter:image" content="http://yoursite.com/E:\05程序\博客代码\Tensorflow\13.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -306,11 +291,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Tensorflow快速入门3–代码结构及模型例子"><a href="#Tensorflow快速入门3–代码结构及模型例子" class="headerlink" title="Tensorflow快速入门3–代码结构及模型例子"></a>Tensorflow快速入门3–代码结构及模型例子</h1><!-- Tensorflow本身附带了很多例程，网上很多博客、帖子其实都是Tensorflow本身附带的例子。本文简单分析一些Tensorflow代码结构及模型例子，很多例子都是可以直接运行的，当然考虑到训练时间及电脑的配置，可以自行修改相应参数，以便快速上手，适合初学者练习。 -->
-<p>description:  “Hadoop是一种开源的适合大数据的分布式存储和处理的平台。</p>
-<p>Hadoop有三种不同的模式操作，分别为单机模式、伪分布模式和完全分布模。</p>
-<p>Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”</p>
-<p><strong>环境：</strong></p>
+        <h1 id="Tensorflow快速入门3–代码结构及模型例子"><a href="#Tensorflow快速入门3–代码结构及模型例子" class="headerlink" title="Tensorflow快速入门3–代码结构及模型例子"></a>Tensorflow快速入门3–代码结构及模型例子</h1><p><strong>环境：</strong></p>
 <p>​    虚拟机ubuntun16.0.4； Tensorflow版本：0.12.0(仅使用cpu下的) ，</p>
 <p>​    Tensorflow安装见：</p>
 <p>​    <a href="http://blog.csdn.net/yhhyhhyhhyhh/article/details/54429034" target="_blank" rel="external">http://blog.csdn.net/yhhyhhyhhyhh/article/details/54429034</a></p>
@@ -542,7 +523,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）”
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/Tensorflow快速入门3–代码结构及模型例子/">Tensorflow快速入门3--代码结构及模型例子</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/hadoop学习笔记4：hadoop、spark概念/">hadoop学习笔记4：hadoop、spark概念</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/hadoop学习笔记3：分布式搭建及测试/">hadoop学习笔记3：集群/分布式搭建及测试</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/Tensorflow快速入门3–代码结构及模型例子/">Tensorflow快速入门3--代码结构及模型例子</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/26/hadoop学习笔记4：hadoop、spark概念/">hadoop学习笔记4：hadoop、spark概念</a></li></ul>
 
 
 
