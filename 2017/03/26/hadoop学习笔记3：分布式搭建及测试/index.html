@@ -15,32 +15,20 @@
 
 
 
-<meta name="description" content="hadoop学习笔记3：集群/分布式搭建及测试[TOC]
-
+<meta name="description" content="hadoop学习笔记3：集群/分布式搭建及测试description： “记录一下hadoop集群搭建，使用3个虚拟机做为节点来搭建集群环境，并进行测试”
 
 环境：
 
-​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/details/53945810 
-
-准备：
-
-
-在3个虚拟机或者3台机器上安装java环境、安">
+​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hadoop学习笔记3：集群/分布式搭建及测试">
 <meta property="og:url" content="http://yoursite.com/2017/03/26/hadoop学习笔记3：分布式搭建及测试/index.html">
 <meta property="og:site_name" content="2010yhh的个人博客">
-<meta property="og:description" content="hadoop学习笔记3：集群/分布式搭建及测试[TOC]
-
+<meta property="og:description" content="hadoop学习笔记3：集群/分布式搭建及测试description： “记录一下hadoop集群搭建，使用3个虚拟机做为节点来搭建集群环境，并进行测试”
 
 环境：
 
-​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/details/53945810 
-
-准备：
-
-
-在3个虚拟机或者3台机器上安装java环境、安">
+​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\1-1.png">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\1-2.png">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\2-1.png">
@@ -54,20 +42,14 @@
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\4-1.png">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\4-2.png">
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\4-4.png">
-<meta property="og:updated_time" content="2017-03-26T07:25:24.810Z">
+<meta property="og:updated_time" content="2017-03-26T07:32:01.918Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop学习笔记3：集群/分布式搭建及测试">
-<meta name="twitter:description" content="hadoop学习笔记3：集群/分布式搭建及测试[TOC]
-
+<meta name="twitter:description" content="hadoop学习笔记3：集群/分布式搭建及测试description： “记录一下hadoop集群搭建，使用3个虚拟机做为节点来搭建集群环境，并进行测试”
 
 环境：
 
-​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/details/53945810 
-
-准备：
-
-
-在3个虚拟机或者3台机器上安装java环境、安">
+​    虚拟机ubuntun16.0.4，​        jdk1.8.0_111,​        hadoop-2.7.3, 下载地址见： http://blog.csdn.net/yhhyhhyhhyhh/article/">
 <meta name="twitter:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\1-1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -196,8 +178,6 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
-                            <li><a href="http://blog.csdn.net/yhhyhhyhhyhh">友情链接</a></li>
-                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
@@ -260,8 +240,6 @@
                     <li><a href="/">主页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="http://blog.csdn.net/yhhyhhyhhyhh">友情链接</a></li>
                 
                     <li><a href="/tags/">标签云</a></li>
                 
@@ -327,8 +305,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="hadoop学习笔记3：集群-分布式搭建及测试"><a href="#hadoop学习笔记3：集群-分布式搭建及测试" class="headerlink" title="hadoop学习笔记3：集群/分布式搭建及测试"></a>hadoop学习笔记3：集群/分布式搭建及测试</h1><p>[TOC]</p>
-<!-- 记录一下hadoop集群搭建，使用3个虚拟机做为节点来搭建集群环境，并进行测试。 -->
+        <h1 id="hadoop学习笔记3：集群-分布式搭建及测试"><a href="#hadoop学习笔记3：集群-分布式搭建及测试" class="headerlink" title="hadoop学习笔记3：集群/分布式搭建及测试"></a>hadoop学习笔记3：集群/分布式搭建及测试</h1><p>description： “记录一下hadoop集群搭建，使用3个虚拟机做为节点来搭建集群环境，并进行测试”</p>
 <blockquote>
 <p><strong>环境：</strong></p>
 </blockquote>
