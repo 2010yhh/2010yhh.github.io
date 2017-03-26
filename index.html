@@ -97,7 +97,7 @@
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/yhh.png" class="animated zoomIn">
+            <img src="/img/2010yhh.jpg" class="animated zoomIn">
         </a>
         <hgroup>
           <h1 class="header-author"><a href="/">2010yhh</a></h1>
@@ -173,7 +173,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hadoop/">hadoop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tensorflow/">tensorflow</a></li></ul>
                     </div>
                 </section>
                 
@@ -203,7 +203,7 @@
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/yhh.png" class="animated zoomIn">
+                <img src="/img/2010yhh.jpg" class="animated zoomIn">
             </a>
             <hgroup>
               <h1 class="header-author"><a href="/" title="回到主页">2010yhh</a></h1>
@@ -238,11 +238,11 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world - 副本" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Tensorflow快速入门3–代码结构及模型例子" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/26/hello-world - 副本/" class="article-date">
-      <time datetime="2017-03-26T07:04:56.245Z" itemprop="datePublished">2017-03-26</time>
+      <a href="/2017/03/26/Tensorflow快速入门3–代码结构及模型例子/" class="article-date">
+      <time datetime="2017-03-26T07:10:35.820Z" itemprop="datePublished">2017-03-26</time>
 </a>
 
 
@@ -257,7 +257,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/hello-world - 副本/">2010yhh22222</a>
+      <a class="article-title" href="/2017/03/26/Tensorflow快速入门3–代码结构及模型例子/">Tensorflow快速入门3--代码结构及模型例子</a>
     </h1>
   
 
@@ -267,15 +267,145 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h1 id="Tensorflow快速入门3–代码结构及模型例子"><a href="#Tensorflow快速入门3–代码结构及模型例子" class="headerlink" title="Tensorflow快速入门3–代码结构及模型例子"></a>Tensorflow快速入门3–代码结构及模型例子</h1><p>[TOC]</p>
+<p>​    <strong>环境：</strong></p>
+<p>​    虚拟机ubuntun16.0.4； Tensorflow版本：0.12.0(仅使用cpu下的) ，</p>
+<p>​    Tensorflow安装见：</p>
+<p>​    <a href="http://blog.csdn.net/yhhyhhyhhyhh/article/details/54429034" target="_blank" rel="external">http://blog.csdn.net/yhhyhhyhhyhh/article/details/54429034</a></p>
+<pre><code>或者：
+</code></pre><p>​    <a href="http://www.tensorfly.cn/tfdoc/get_started/os_setup.html" target="_blank" rel="external">http://www.tensorfly.cn/tfdoc/get_started/os_setup.html</a></p>
+<p>​    学习一个新框架、新模型，通常会先找相关的demo例程跑一下，然而Tensorflow版本更新快，接口也变化，初学者一开始就分析源码、学习框架会感觉很困难，Tensorflow本身附带了很多例程，网上很多博客、帖子其实都是Tensorflow本身附带的例子。本文简单分析一些Tensorflow代码结构及模型例子，很多例子都是可以直接运行的，当然考虑到训练时间及电脑的配置，可以自行修改相应参数，以便快速上手，适合初学者练习。</p>
+<h2 id="1-Tensorflow代码结构"><a href="#1-Tensorflow代码结构" class="headerlink" title="1.Tensorflow代码结构"></a>1.Tensorflow代码结构</h2><p>​    Tensorflow github地址：<a href="https://github.com/tensorflow" target="_blank" rel="external">https://github.com/tensorflow</a></p>
+<p><img src="E:\05程序\博客代码\Tensorflow\13.jpg" alt="13"></p>
+<h4 id="1-1源码目录"><a href="#1-1源码目录" class="headerlink" title="1.1源码目录"></a>1.1源码目录</h4><p>​    <strong>tensorflow目录：</strong></p>
+<p><img src="E:\05程序\博客代码\Tensorflow\15.jpg" alt="15">            </p>
+<p>​    <strong>重要目录：</strong></p>
+<ul>
+<li>目录contrib 该目录下存放有其他项目贡献者添加的相关贡献代码</li>
+<li>目录core 该目录为tensorflow的C++源码的核心</li>
+<li>目录g3doc是针对c++、python的版本的代码文档</li>
+<li>目录example下有andord系统的一个示例</li>
+<li>目录python 该目录下存放了tensorflow使用python编写的相关代码，是和”core“目录对应的python实现目录</li>
+<li>stream_executor，流处理，看里面还有dnn之类，具体详细待定</li>
+<li>目录tensorboard 是tensorflow中非常有特色的一个模块，该模块可以用于生成模型训练中实时生成图表，用于监控模型的训练程度。</li>
+<li>目录tools 一些工具杂项，pip。</li>
+<li>目录user_ops 用户可进行编写自己的op并添加到该目录。</li>
+</ul>
+<h4 id="1-2Tensorflow的core目录"><a href="#1-2Tensorflow的core目录" class="headerlink" title="1.2Tensorflow的core目录"></a>1.2Tensorflow的core目录</h4><p><img src="E:\05程序\博客代码\Tensorflow\15.jpg" alt="15"></p>
+<p>​    core目录是tensorflow源码中最核心的一个目录，其代码逻辑主要为C++开发实现。</p>
+<ul>
+<li>目录common_runtime 该目录下包含了tensorflow中session执行的通用逻辑流程。</li>
+<li>目录distributed_runtime tensorflow 与分布式相关的执行逻辑。</li>
+<li>目录framework 该目录下对tensorflow进行计算过程中的通用组件进行了定义和实现。</li>
+<li>目录graph ，tensorflow图相关操作的逻辑。由于tensorflow中的数据计算本质上是一个图状结构的计算流程，该过程中存在将图进行切分并且并行化执行的可能性。该目录下的代码逻辑即为对图数据进行结构化定义并进行拆分的相关内容。</li>
+<li>目录kernels 对tensorflow中各个单步操作的具体实现。录下包含了大量的tensorflow中单步操作的实现方式。(如Variable（）)</li>
+<li>目录util/lib 一些公用的调用方法。</li>
+<li>目录ops对kernel/ 下的op进行注册和对外声明。</li>
+<li>目录protobuf ，tensorflow下各个模块间进行数据传输的数据结构定义，通过proto进行配置实现。</li>
+<li>目录public，删除、更新一些接口的声明</li>
+<li>目录user_ops 用户可进行编写自己的op并添加到该目录</li>
+</ul>
+<h4 id="1-3Tensorflow的models目录"><a href="#1-3Tensorflow的models目录" class="headerlink" title="1.3Tensorflow的models目录"></a>1.3Tensorflow的models目录</h4><p>​    在models中包含很多经典的机器学习例程。</p>
+<p><img src="E:\05程序\博客代码\Tensorflow\17.jpg" alt="17"></p>
+<p><img src="E:\05程序\博客代码\Tensorflow\14.jpg" alt="14"></p>
+<ul>
+<li>alexnet:  alexnet（Imagenet Classification with Deep Convolutional Neural Networks）是在2012年被发表的一个经典之作，并在当年取得了ImageNet最好成绩，也是在那年之后，更多的神经网络被提出。</li>
+<li>cifar10：在cifar_10数据集上的一个测试例程。</li>
+<li>imagenet：ImageNet(<a href="http://www.image-net.org)是李菲菲组的图像库，该例程是个图像识别的demo。" target="_blank" rel="external">http://www.image-net.org)是李菲菲组的图像库，该例程是个图像识别的demo。</a></li>
+<li>mnist：卷积神经网络在手写数字识别的一个例程。</li>
+</ul>
+<h2 id="2-Tensorflow附带的模型例子"><a href="#2-Tensorflow附带的模型例子" class="headerlink" title="2.Tensorflow附带的模型例子"></a>2.Tensorflow附带的模型例子</h2><p>​    我的ubuntun通过pip安装Tensorflow后，安装目录在：/usr/local/lib/python2.7/dist-packages/，可将整个Tensorflow文件夹复制到home下，便于编辑和修改。Tensorflow附带的模型例子在/tensorflow/models下。</p>
+<p><img src="E:\05程序\博客代码\Tensorflow\20.jpg" alt="20"></p>
+<h4 id="2-1mnist"><a href="#2-1mnist" class="headerlink" title="2.1mnist"></a>2.1mnist</h4><p>​    mnist是一个手写数字识别的数据集，包含60000行的训练数据集和10000行的测试数据集，每一个MNIST数据单元有两部分组成：一张包含手写数字的图片和一个对应的标签，大小为28x28像素的灰度图片。Tensorflow附带的mnist目录包含一个简单的卷积神经网络训练及测试mnist的demo。</p>
+<table>
+<thead>
+<tr>
+<th>数据集</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data_sets.train</td>
+<td>55000 组 图片和标签, 用于训练。</td>
+</tr>
+<tr>
+<td>data_sets.validation</td>
+<td>5000 组 图片和标签, 用于迭代验证训练的准确性。</td>
+</tr>
+<tr>
+<td>data_sets.test</td>
+<td>10000 组 图片和标签, 用于最终测试训练的准确性。</td>
+</tr>
+</tbody>
+</table>
+<p>​    <strong>Tensorflow中测试mnist的例程使用，直接在终端中运行以下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">yhh@ubuntu:~$ cd ~/Test/tensorflow/models/image/mnist/</div><div class="line">yhh@ubuntu:~/Test/tensorflow/models/image/mnist$ python convolutional.py</div></pre></td></tr></table></figure>
+<p><img src="E:\05程序\博客代码\Tensorflow\18.jpg" alt="18"></p>
+<p>​    运行一下mnist例程，最终结果测试的正确率：92%</p>
+<h4 id="2-2Cifar-10"><a href="#2-2Cifar-10" class="headerlink" title="2.2Cifar-10"></a>2.2Cifar-10</h4><p>​    Cifar-10由60000张32*32的RGB彩色图片构成，共10个分类。50000张训练，10000张测试（交叉验证）。</p>
+<p>/tensorflow/models/image/cifar_10下包含以下文件：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">cifar10_input.py</td>
+<td>读取本地CIFAR-10的二进制文件格式的内容</td>
+</tr>
+<tr>
+<td style="text-align:left">cifar10.py</td>
+<td>建立CIFAR-10的模型</td>
+</tr>
+<tr>
+<td style="text-align:left">cifar10_train.py</td>
+<td>在CPU或GPU上训练CIFAR-10的模型</td>
+</tr>
+<tr>
+<td style="text-align:left">cifar10_multi_gpu_train.py</td>
+<td>在多GPU上训练CIFAR-10的模型（没用GPU的话，不用管）</td>
+</tr>
+<tr>
+<td style="text-align:left">cifar10_eval.py</td>
+<td>评估CIFAR-10模型的预测性能</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>cifar10<strong><em>train.py会调用 cifar</em></strong>10.py中的接口， cifar<strong>10.py会调用cifar10_</strong>input.py中的接口</p>
+</blockquote>
+<p>​    <strong>Tensorflow中测试cifar10的例程使用，直接在终端中运行以下：</strong></p>
+<p>​    1）开始训练</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yhh@ubuntu:~/Test/tensorflow/models/image/cifar10$ python cifar10_train.py</div></pre></td></tr></table></figure>
+<p>​    2）测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yhh@ubuntu:~/Test/tensorflow/models/image/cifar10$ python cifar10_eval.py</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：</strong>上述训练文件：cifar10_train.py中的max_steps在跑代码测试时可自行修改，太大的话训练时间太长了。</p>
+</blockquote>
+<p>​    由下图实验结果可知，训练次数max_steps还是很影像最终精确度的。</p>
+<p><img src="E:\05程序\博客代码\Tensorflow\21.jpg" alt="21"></p>
+<p>​    </p>
+<pre><code>&gt;结果：
+</code></pre><p><img src="E:\05程序\博客代码\Tensorflow\19.jpg" alt="19"></p>
+<h4 id="2-3imagenet"><a href="#2-3imagenet" class="headerlink" title="2.3imagenet"></a>2.3imagenet</h4><p>​    ImageNet  模拟人类的识别系统建立的，能够从图片识别物体。目前世界上图像识别最大的数据库。Tensorflow0.12.0附带的测试例子是在ImageNet 2012 Challenge data set。</p>
+<p>​    imagenet比赛设置：1000类图像分类问题，训练数据集126万张图像，验证集5万张，测试集10万张（标注未公布）。2012，2013，2014均采用了该数据集。评价标准采用top-5错误率，即对一张图像预测5个类别，只要有一个和人工标注类别相同就算对，否则算错。</p>
+<p>​    <strong>Tensorflow中测试imagenet的例程使用，直接在终端中运行以下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yhh@ubuntu:~/Test/tensorflow/models/image/imagenet$ python classify_image.py</div></pre></td></tr></table></figure>
+<p>输入为任意一张图片，输出为识别概率（1000类）最靠前的5类结果。（默认读取图片的路径为：/tmp/imagenet）</p>
+<p>部分测试结果：</p>
+<blockquote>
+<p><strong>输入：</strong></p>
+</blockquote>
+<p><img src="E:\05程序\博客代码\Tensorflow\QQ截图20170121171240.jpg" alt="QQ截图20170121171240"></p>
+<blockquote>
+<p><strong>识别结果：</strong></p>
+</blockquote>
+<p><img src="E:\05程序\博客代码\Tensorflow\QQ截图20170121171812.jpg" alt="QQ截图20170121171812"></p>
+<h2 id="3-Tensorflow学习文档"><a href="#3-Tensorflow学习文档" class="headerlink" title="3.Tensorflow学习文档"></a>3.Tensorflow学习文档</h2><p>​    <a href="http://www.tensorfly.cn/tfdoc/tutorials/mnist_pros.html" target="_blank" rel="external">Tenssorflow中文社区</a></p>
 
       
     </div>
@@ -284,7 +414,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/hadoop/">hadoop</a>
+    <a class="article-category-link" href="/categories/tensorflow/">tensorflow</a>
     </div>
 
 
@@ -647,78 +777,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hadoop/">hadoop</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/26/hello-world/" class="article-date">
-      <time datetime="2017-03-26T02:42:20.616Z" itemprop="datePublished">2017-03-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/26/hello-world/">2010yhh</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/ml/">ml</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ml/">ml</a></li></ul>
     </div>
 
       
