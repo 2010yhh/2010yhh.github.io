@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html lang="zh-Hans">
 <head>
 
     <!--[if lt IE 9]>
@@ -11,7 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="format-detection" content="telephone=no" />
-<meta name="author" content="John Doe" />
+<meta name="author" content="2010yhh" />
 
 
 
@@ -26,9 +26,9 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 
 保存多个副本，且提供容错机制，副本丢失或宕机自动恢复。默认存3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="2010yhh的个人博客">
 <meta property="og:url" content="http://yoursite.com/2017/03/26/hadoop学习笔记4：hadoop、spark概念/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="2010yhh的个人博客">
 <meta property="og:description" content="hadoop学习笔记4：hadoop、spark概念[TOC]
 1.hadoop
 Hadoop是一种开源的适合大数据的分布式存储和处理的平台。
@@ -44,7 +44,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 <meta property="og:image" content="http://yoursite.com/E:\05程序\linux\hadoop博客\hadoop学习笔记3：分布式搭建及测试\hadoop生态.jpg">
 <meta property="og:updated_time" content="2017-03-26T04:46:00.102Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="2010yhh的个人博客">
 <meta name="twitter:description" content="hadoop学习笔记4：hadoop、spark概念[TOC]
 1.hadoop
 Hadoop是一种开源的适合大数据的分布式存储和处理的平台。
@@ -60,7 +60,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="2010yhh的个人博客" type="application/atom+xml">
 
 
 
@@ -87,7 +87,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hexo</title>
+<title>2010yhh的个人博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -108,7 +108,9 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -127,10 +129,10 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
 <div class="intrude-less">
     <header id="header" class="inner">
         <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
+            <img src="/img/bilibili.png" class="animated zoomIn">
         </a>
         <hgroup>
-          <h1 class="header-author"><a href="/">John Doe</a></h1>
+          <h1 class="header-author"><a href="/">2010yhh</a></h1>
         </hgroup>
 
         
@@ -199,11 +201,9 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa CSDN" href="/" title="CSDN"></a>
                             
                         </ul>
                     </nav>
@@ -247,15 +247,15 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
       <nav id="mobile-nav">
       <div class="overlay">
           <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">2010yhh</a></h1>
       </div>
     <div class="intrude-less">
         <header id="header" class="inner">
             <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
+                <img src="/img/bilibili.png" class="animated zoomIn">
             </a>
             <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+              <h1 class="header-author"><a href="/" title="回到主页">2010yhh</a></h1>
             </hgroup>
             
             <nav class="header-menu">
@@ -275,11 +275,9 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
-                            
                                 <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa CSDN" target="_blank" href="/" title="CSDN"></a>
                             
                         </ul>
             </nav>
@@ -373,12 +371,12 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
     
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/03/26/hadoop学习笔记4：hadoop、spark概念/"></a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">John Doe</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">2010yhh</a></p>
         <p><span>发布时间:</span>2017-03-26, 13:04:47</p>
         <p><span>最后更新:</span>2017-03-26, 12:46:00</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/26/hadoop学习笔记4：hadoop、spark概念/" title="">http://yoursite.com/2017/03/26/hadoop学习笔记4：hadoop、spark概念/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/26/hadoop学习笔记4：hadoop、spark概念/　　作者: John Doe" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/26/hadoop学习笔记4：hadoop、spark概念/　　作者: 2010yhh" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -441,7 +439,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"　| 2010yhh的个人博客　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -487,7 +485,7 @@ Hadoop的核心是HDFS、Mapreduce和YARN（hadoop2.0以上）
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 John Doe
+                2016-2017 2010yhh
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
