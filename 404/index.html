@@ -29,8 +29,6 @@
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="2010yhh的个人博客" type="application/atom+xml">
-
 
 
     <link rel="shortcut icon" href="/favicon.png">
@@ -374,7 +372,22 @@
 <script>
     // Open in New Window
     
-        $("a[target=_blank]").removeAttr("target");
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+            
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
     
 </script>
 
